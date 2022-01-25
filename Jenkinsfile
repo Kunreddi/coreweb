@@ -20,7 +20,7 @@ pipeline {
                         userRemoteConfigs: [
                             [
                                 credentialsId: 'git', 
-                                url: 'https://github.com/Kunreddi/WebApplication1.git'
+                                url: 'https://github.com/Kunreddi/coreweb.git'
                             ]
                         ]
                     ]
