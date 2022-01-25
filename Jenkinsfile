@@ -30,8 +30,8 @@ pipeline {
 
         stage('Building the project') {
             steps {
-                //bat 'nuget restore ${PROJECT_SOLUTION_NAME}'
-		        bat "\"${tool 'Microsoft Visual Studio'}\\msbuild.exe\" ${PROJECT_SOLUTION_NAME} /p:DeployOnBuild=true /p:PublishProfile=FolderProfile /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
+                        bat 'nuget restore ${PROJECT_SOLUTION_NAME}'
+		        bat "\"${tool 'MicrosoftVisualStudio'}\\msbuild.exe\" ${PROJECT_SOLUTION_NAME} /p:DeployOnBuild=true /p:PublishProfile=FolderProfile /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
             }
         }
 
